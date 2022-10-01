@@ -1,4 +1,4 @@
-def asm_pio(*args, **kwargs):
+def asm_pio(*args, **kwargs): # Esta clase permite la simulación de la raspberry en la consola del computador sin el hardware conectado
     def decorador(programa):
         def compilador():
             print("Parámetros", kwargs) 

@@ -6,6 +6,7 @@ from rp2_sim import *
 # Blink state machine program. Blinks LED at 10 Hz (with freq=2000)
 # 2000 Hz / (20 cycles per instruction * 10 instructions) = 10 Hz
 # Single pin (base pin) starts at output and logic low
+
 @rp2.asm_pio(set_init=rp2.PIO.OUT_LOW)
 def blink():
     wrap_target()
@@ -20,7 +21,6 @@ def blink():
     nop()        [19]
     nop()        [19]
     wrap()
-
 
 # Init state machine with "blink" program
 # (state machine 0, running at 2kHz, base pin is GP25 (LED))
